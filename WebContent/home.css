@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+#navHead{
+	background-color: #0C193A;
+	
+}
+
+.list:hover{
+	border-bottom: solid white 1px;
+	
+}
+
+#logo{
+	width: 5em;
+}
