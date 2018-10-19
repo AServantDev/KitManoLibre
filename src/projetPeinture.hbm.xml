@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="KLM.com.model.projetPeinture" table="projetPeinture">
+        <id name="idProjetPeinture" type="int" column="idProjetPeinture">
+            <generator class="increment" />
+        </id>
+        <property name="idProjet">
+            <column name="idProjet" />
+        </property>
+        <property name="idPeinture">
+            <column name="idPeinture" />
+        </property>
+        <property name="idRouleaux">
+            <column name="idRouleaux" />
+        </property>
+        <property name="idAdhesif">
+            <column name="idAdhesif" />
+        </property>
+        <property name="idUndercoat">
+            <column name="idUndecoat" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

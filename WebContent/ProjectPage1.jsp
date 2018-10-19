@@ -1,12 +1,39 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="home.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
-<body>
+<body id="homeBody">
+
+	<jsp:include page="header.jsp"></jsp:include>
+
+	<div class="container">
+
+		
+		<center>
+		<h2 class=" float-sm-left" id="go">Tu as décidé de t’y mettre ?</h2>
+
+			<h3 class="d-flex justify-content-center" id="welcome">Nous
+				sommes là pour t’aider ! Découvre ta sélection personnalisée de
+				produits indispensables et conseils pour réussir ton projet !</h3>
+		
+		
+		<a href="ChoixPiece.jsp"><button " id="parti" type="button" class="btn btn-primary">C'est parti !</button></a>
+		</center>	
+	</div>
+
 
 </body>
 </html>

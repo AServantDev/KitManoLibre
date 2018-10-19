@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="KLM.com.model.Produits" table="produits">
+        <id name="idProduits" type="int" column="idProduit">
+            
+        </id>
+        <property name="typeProduit">
+            <column name="typeProduit" />
+        </property>
+        <property name="typeTravaux">
+            <column name="typeTravaux" />
+        </property>
+        <property name="prix">
+            <column name="prix" />
+        </property>
+        <property name="couleur">
+            <column name="couleur" />
+        </property>
+        <property name="image">
+            <column name="image" />
+        </property>
+        <property name="lien">
+            <column name="lien" />
+        </property>
+        <property name="nomProduit">
+            <column name="nomProduit" />
+        </property>
+        <property name="SdB">
+            <column name="SdB" />
+        </property>
+        
+    </class>
+</hibernate-mapping>
