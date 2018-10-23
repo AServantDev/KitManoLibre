@@ -30,7 +30,7 @@
 				produits indispensables et conseils pour réussir ton projet !</h3>
 		
 		
-		<a href="ChoixPiece.jsp"><button " id="parti" type="button" class="btn btn-primary">C'est parti !</button></a>
+		<a href="ChoixPiece.jsp"><button id="parti" type="button" class="btn btn-primary">C'est parti !</button></a>
 		</center>	
 	</div>
 

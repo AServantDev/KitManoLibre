@@ -85,7 +85,7 @@ public class ProjetPeintureDao {
 					roll.setTypeRouleau(result2.getString("TypeRouleau"));
 					roll.setPrix(result2.getDouble("prix"));
 					roll.setNomRouleau(result2.getString("nomRouleau"));
-					System.out.println(roll.getNomRouleau());
+
 				}
 				String sql3 = "SELECT * FROM Peinture WHERE idProduit = '" + idPeinture + "'";
 				st3 = (Statement) con.createStatement();

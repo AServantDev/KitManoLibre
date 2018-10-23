@@ -14,53 +14,52 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<title>Insert title here</title>
+<title>Choisi la pièce!</title>
 </head>
 <body>
 
 	<jsp:include page="header.jsp"></jsp:include>
-	<div class="container ">
-		<div class=" row">
+	<center>
 
-			<center>
-				<h1>Quelle pièce souhaites-tu peindre ?</h1>
-			</center>
+		<div class="container justify-content-center ">
+			<div class=" row">
 
-			<div class="column d-flex justify-content-center">
+				<center>
+					<h1 class="pieceTitre">Quelle pièce souhaites-tu peindre ?</h1>
+				</center>
 
+				<div class="column d-flex justify-content-center">
 
+					<a href="ProjetPeintureController?idProjetPeinture=1"><input class="form-check-input" type="hidden" id="inlineCheckbox1"
+						value="chambre"> <label class="form-check-label"
+						for="inlineCheckbox1"><img class="piece"
+						src="image/Boutons/Chambre.png"></label></a> <input
+						class="form-check-input" type="hidden" id="inlineCheckbox1"
+						value="cuisine"> <label class="form-check-label"
+						for="inlineCheckbox1"><img class="piece"
+						src="image/Boutons/Cuisine.png"></label>
+				</div>
 
-				<br> <br> <br> <input class="form-check-input"
-					type="hidden" id="inlineCheckbox1" value="option1"> <label
-					class="form-check-label" for="inlineCheckbox1"><img
-					class="piece" src="image/Boutons/Chambre.png"></label> <input
-					class="form-check-input" type="hidden" id="inlineCheckbox1"
-					value="option1"> <label class="form-check-label"
-					for="inlineCheckbox1"><img class="piece"
-					src="image/Boutons/Cuisine.png"></label>
 			</div>
 
-		</div>
-		<br> <br>
+			<div class="row">
 
-		<div class="row">
+				<div class="column">
 
-			<div class="column">
+					<input class="form-check-input" type="hidden" id="inlineCheckbox1"
+						value="SdB"> <label class="form-check-label"
+						for="inlineCheckbox1"><img class="piece"
+						src="image/Boutons/SdB.png"></label> <input class="form-check-input"
+						type="hidden" id="inlineCheckbox1" value="salon"> <label
+						class="form-check-label" for="inlineCheckbox1"><img
+						class="piece" src="image/Boutons/Salon.png"></label>
+				</div>
 
-				<input class="form-check-input" type="hidden" id="inlineCheckbox1"
-					value="option1"> <label class="form-check-label"
-					for="inlineCheckbox1"><img class="piece"
-					src="image/Boutons/SdB.png"></label> <input class="form-check-input"
-					type="hidden" id="inlineCheckbox1" value="option1"> <label
-					class="form-check-label" for="inlineCheckbox1"><img
-					class="piece" src="image/Boutons/Salon.png"></label>
 			</div>
-
 		</div>
-	</div>
-	
-	<a href="ProjetPeintureController?idProjetPeinture=1">Click me!</a>
-	
+	</center>
+
+
 </body>
 
 </html>

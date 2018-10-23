@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 #homeBody {
 	background-image: url("image/Background_iPhone_8_V2.jpg");
 	background-size: cover;
@@ -46,9 +45,6 @@
 #welcome {
 	margin-top: 6em;
 	color: #0C193A;
-	
-	
-	
 }
 
 #parti {
@@ -68,20 +64,43 @@ h2 {
 	margin-top: 6rem;
 }
 
-#title{
-
+#title {
 	background-color: #1E3C87;
 	color: white;
-	
-	
 }
 
-.carte{
-	border: 1px black;
+
+
+.piece {
+	width: 120px;
 }
 
-.zbi{
-	position: bottom;
-	
-	
+.pieceTitre {
+	font-size: 24pt;
+	color: #1E3C87;
+}
+
+#konoDio {
+	width: 7em;
+}
+
+#bodyPanier {
+	background-image: linear-gradient(#00ECCD, #29B9AD);
+}
+
+.zbi {
+	position: relative;
+	bottom: 0;
+	width: 100%
+}
+
+#carte{
+	background-color: #FAFAFA;
+	border-radius: 10pt;
+	padding-left: 10px;
+	height: 100%;
+}
+
+.price{
+	color: #0C193A;
 }
