@@ -4,11 +4,27 @@
 	background-image: url("image/Background_iPhone_8_V2.jpg");
 	background-size: cover;
 	font-family: 'Open Sans', sans-serif;
+	padding-bottom: 2rem;
 }
 
 #navHead {
 	background-color: #0C193A;
 	box-shadow: 2px 2px 8px #888888;
+}
+
+#navHead *::before, #navHead *::after {
+	content: none;
+}
+
+#navHead-horizontal {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+#navHead-horizontal-header {
+	align-items: center;
+	display: flex;
 }
 
 .list:hover {
@@ -25,7 +41,7 @@
 }
 
 #btnNav {
-	margin-top: 15px;
+	/* margin-top: 15px; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -43,15 +59,15 @@
 }
 
 #welcome {
-	margin-top: 6em;
 	color: #0C193A;
+	margin-top: 6em;
 }
 
 #parti {
-	color: #fff;
 	background-color: #00eccd;
 	border-color: #00eccd;
 	border-radius: 1.2em;
+	color: #fff;
 	width: 80%;
 }
 
@@ -89,16 +105,16 @@ h2 {
 }
 
 .zbi {
-	position: relative;
 	bottom: 0;
+	position: relative;
 	width: 100%
 }
 
 #carte{
 	background-color: #FAFAFA;
 	border-radius: 10pt;
-	padding-left: 10px;
 	height: 100%;
+	padding-left: 10px;
 }
 
 .price{
