@@ -96,10 +96,6 @@ h2 {
 	color: #1E3C87;
 }
 
-#konoDio {
-	width: 7em;
-}
-
 #bodyPanier {
 	background-image: linear-gradient(#00ECCD, #29B9AD);
 }
@@ -110,13 +106,50 @@ h2 {
 	width: 100%
 }
 
-#carte{
+.card {
 	background-color: #FAFAFA;
 	border-radius: 10pt;
-	height: 100%;
-	padding-left: 10px;
+	color: #3C3C3C;
+	font-family: 'Open Sans', sans-serif;
+	height: auto;
+	padding: 16px;
+	margin-top: 14px;
 }
 
-.price{
-	color: #0C193A;
+.card-header {
+	font-size: 14px;
+	font-weight: 800;
+	margin-top: 0;	
+}
+
+.card-body {
+	display: flex;
+}
+
+.card-image {
+	height: 88px;
+	margin-right: 8px;
+	padding: 0;
+	width: 88px;
+}
+
+.card-body-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.card-name {
+	font-size: 12px;
+	font-weight: 600;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.card-price{
+	color: #1E3C87;
+	font-size: 21px;
+	font-weight: 800;
+	margin-bottom: 0;
+	padding: 0;
 }

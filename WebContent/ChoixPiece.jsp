@@ -30,10 +30,11 @@
 
 				<div class="column d-flex justify-content-center">
 
-					<a href="ProjetPeintureController?idProjetPeinture=1"><input class="form-check-input" type="hidden" id="inlineCheckbox1"
+					<a href="ProjetPeintureController?idProjetPeinture=1"><input
+						class="form-check-input" type="hidden" id="inlineCheckbox1"
 						value="chambre"> <label class="form-check-label"
 						for="inlineCheckbox1"><img class="piece"
-						src="image/Boutons/Chambre.png"></label></a> <input
+							src="image/Boutons/Chambre.png"></label></a> <input
 						class="form-check-input" type="hidden" id="inlineCheckbox1"
 						value="cuisine"> <label class="form-check-label"
 						for="inlineCheckbox1"><img class="piece"

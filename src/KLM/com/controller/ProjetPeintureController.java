@@ -63,6 +63,7 @@ public class ProjetPeintureController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+/*
 		int PPeintureId = Integer.parseInt(request.getParameter("idProjetPeinture"));
 
 		ProjetPeintureDao dao = new ProjetPeintureDao();
@@ -70,6 +71,7 @@ public class ProjetPeintureController extends HttpServlet {
 
 		request.setAttribute("projetpeinture", peintureProjet);
 		request.getRequestDispatcher("Panier.jsp").forward(request, response);
+*/
 	}
 
 }

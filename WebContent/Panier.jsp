@@ -29,48 +29,52 @@
 
 	<div class="container">
 
-		<div class="card" id="carte">
+		<div class="card">
 
+			<h4 class="card-header">Peinture</h4>
 			<div class="card-body">
-				<h4>Peinture</h4>
-				<div class="bodyCarte">
-					<img class="col-sm-3" id="konoDio" src=${peinture.image }
-						alt="Card image cap"> <span class="col-sm-3">${peinture.nomProduit }</span>
-					<div class="col-sm price">${peinture.prix }€</div>
+				<img class="col-sm-3 card-image" id="konoDio" src="https://cdn.manomano.fr/peinture-guittet-mat-78-hydro-confort-blanc-P-356975-9185696_1.jpg"
+					alt="Card image cap">
+				<div class="card-body-text">
+					<p class="col-sm-3 card-name">Peinture GUITTET MAT 78 HYDRO+ CONFORT BLANC</p>
+					<p class="col-sm card-price">14€</p>
 				</div>
 			</div>
 		</div>
 
-		<div class="card" id="carte">
+		<div class="card">
 
+			<h4 class="card-header">Sous-couche</h4>
 			<div class="card-body">
-				<h4>Sous-couche</h4>
-				<div class="bodyCarte">
-					<img class="col-sm-3" id="konoDio" src=${undercoat.imgSC }
-						alt="Card image cap"> <span class="col-sm-3">${undercoat.nomSC }</span>
-					<div class="col-sm price">${undercoat.prix }€</div>
+				<img class="col-sm-3 card-image" id="konoDio" src="https://cdn.manomano.fr/sous-couche-universelle-addict-P-338-3989626_1.jpg"
+					alt="Card image cap">
+				<div class="card-body-text">
+					<p class="col-sm-3 card-name">Peinture addict sous-couche universelle</p>
+					<p class="col-sm card-price">16,54€</p>
 				</div>
 			</div>
 		</div>
-		<div class="card" id="carte">
+		<div class="card">
 
+			<h4 class="card-header">Rouleaux</h4>
 			<div class="card-body">
-				<h4>Rouleaux</h4>
-				<div class="bodyCarte">
-					<img class="col-sm-3" id="konoDio" src=${roll.imgR }
-						alt="Card image cap"> <span class="col-sm-3">${roll.nomRouleau }</span>
-					<div class="col-sm price">${roll.prix }€</div>
+				<img class="col-sm-3 card-image" id="konoDio" src="https://cdn.manomano.fr/lot-9-pieces-pour-decorateur-9-pcs-P-149211-335307_1.jpg"
+					alt="Card image cap">
+				<div class="card-body-text">
+					<p class="col-sm-3 card-name">Kit de peinture 9 pièces</p>
+					<p class="col-sm card-price">6,19€</p>
 				</div>
 			</div>
 		</div>
-		<div class="card" id="carte">
-
+		<div class="card">
+			<h4 class="card-header">Adhésif de masquage</h4>
+			<button>Supprimer</button>
 			<div class="card-body">
-				<h4>Adhésif de masquage</h4>
-				<div class="bodyCarte">
-					<img class="col-sm-3" id="konoDio" src=${stripe.imgA }
-						alt="Card image cap"> <span class="col-sm-3">${stripe.nomA }</span>
-					<div class="col-sm price">${stripe.prix }€</div>
+				<img class="col-sm-3 card-image" id="konoDio" src=https://cdn.manomano.fr/ruban-de-masquage-50m-x-50mm-P-204211-713473_1.jpg
+					alt="Card image cap">
+				<div class="card-body-text">
+					<p class="col-sm-3 card-name">Ruban de masquage 50m x 50mm</p>
+					<p class="col-sm card-price">2,15€</p>
 				</div>
 			</div>
 		</div>

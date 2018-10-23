@@ -3,9 +3,7 @@ package KLM.com.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.hibernate.query.Query;
+
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
@@ -19,23 +17,7 @@ import KLM.com.util.CreateConnection;
 
 public class ProjetPeintureDao {
 
-	public ProjetPeinture getProjetPeintureById(int PPeintureId) {
-
-		ProjetPeinture projetPeinture = new ProjetPeinture();
-		Transaction trns = null;
-		Session session = HibernateUtil.getSessionFactory().openSession();
-		try {
-			trns = session.beginTransaction();
-			String queryString = "from projetPeinture where idProjetPeinture = :idProjetPeinture";
-			Query query = session.createQuery(queryString);
-			query.setParameter("projetPeinture", PPeintureId);
-			projetPeinture = (ProjetPeinture) query.uniqueResult();
-		} catch (RuntimeException e) {
-			e.printStackTrace();
-		}
-		session.close();
-		return projetPeinture;
-	}
+	
 
 	public String displayProjet(ProjetPeinture project, Rouleaux roll, SousCouche undercoat, Adhesif stripe,
 			Produits peinture) {
