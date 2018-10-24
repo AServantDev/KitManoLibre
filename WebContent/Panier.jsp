@@ -70,7 +70,7 @@
 		</div>
 		<div class="card">
 			<h4 class="card-header">Adhésif de masquage</h4>
-			<div class="card-body">s
+			<div class="card-body">
 				<img class="col-sm-3 card-image" id="konoDio" src=${stripe.imgA }
 					alt="Card image cap">
 				<div class="card-body-text">
