@@ -68,7 +68,6 @@
 		</div>
 		<div class="card">
 			<h4 class="card-header">Adhésif de masquage</h4>
-			<button>Supprimer</button>
 			<div class="card-body">
 				<img class="col-sm-3 card-image" id="konoDio" src=https://cdn.manomano.fr/ruban-de-masquage-50m-x-50mm-P-204211-713473_1.jpg
 					alt="Card image cap">

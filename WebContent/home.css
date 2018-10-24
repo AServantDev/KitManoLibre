@@ -108,7 +108,8 @@ h2 {
 
 .card {
 	background-color: #FAFAFA;
-	border-radius: 10pt;
+	border-radius: 8px;
+	box-shadow: 1px 2px 8px rgba(20, 20, 60, .35);
 	color: #3C3C3C;
 	font-family: 'Open Sans', sans-serif;
 	height: auto;
@@ -128,7 +129,7 @@ h2 {
 
 .card-image {
 	height: 88px;
-	margin-right: 8px;
+	margin-right: 16px;
 	padding: 0;
 	width: 88px;
 }
