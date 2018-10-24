@@ -8,6 +8,9 @@ public class ProjetPeinture {
 	private int idRouleaux ;
 	private int idAdhesif;
 	private int idUndercoat;
+	private int surface;
+	private String nomPiece;
+	private String couleurFinale;
 	
 	
 	public int getIdProjetPeinture() {
@@ -52,6 +55,26 @@ public class ProjetPeinture {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	
+	public int getSurface() {
+		return surface;
+	}
+	public void setSurface(int surface) {
+		this.surface = surface;
+	}
+	public String getNomPiece() {
+		return nomPiece;
+	}
+	public void setNomPiece(String nomPiece) {
+		this.nomPiece = nomPiece;
+	}
+	public String getCouleurFinale() {
+		return couleurFinale;
+	}
+	public void setCouleurFinale(String couleurFinale) {
+		this.couleurFinale = couleurFinale;
+	}
 	@Override
 	public String toString() {
 		return "ProjetPeinture [idProjetPeinture=" + idProjetPeinture + ", idProjet=" + idProjet + ", idPeinture="

@@ -1,9 +1,14 @@
 package KLM.com.dao;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.servlet.http.HttpSession;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
@@ -113,6 +118,104 @@ public class ProjetPeintureDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return test;
+
+	}
+
+	public String createNewProjetPeinture(ProjetPeinture project, HttpSession session) {
+
+		Connection con = null;
+		PreparedStatement pst = null;
+		Statement st = null;
+
+		String test = "";
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = (Connection) CreateConnection.createConnection();
+
+			
+			String query = "insert into projetPeinture(idRouleaux, idAdhesif, idUndecoat) values (?,?,?)";
+
+			pst = con.prepareStatement(query);
+
+			pst.setInt(1, 335307);
+			pst.setInt(2, 713473);
+			pst.setInt(3, 3989626);
+
+			session.setAttribute("idUndercoat", 3989626);
+			session.setAttribute("idAdhesif", 713473);
+			session.setAttribute("idRouleaux", 335307);
+
+			System.out.println();
+			// session.setAttribute("idProjet", id);
+
+			int i = pst.executeUpdate();
+
+			String sql = "SELECT * FROM projetPeinture ORDER BY idProjetPeinture DESC LIMIT 1";
+			st = (Statement) con.createStatement();
+
+			ResultSet result = (ResultSet) st.executeQuery(sql);
+
+			while (result.next()) {
+
+				int a = result.getInt("idProjetPeinture");
+				project.setIdProjetPeinture(a);
+				session.setAttribute("idP", a);
+
+			}
+
+			if (i != 0) { // Just to ensure data has been inserted into the database
+
+				project.setIdAdhesif(713473);
+				project.setIdRouleaux(335307);
+				project.setIdUndercoat(3989626);
+
+				return "SUCCESS";
+			} else {
+				System.out.println("Something went wrong...");
+			}
+
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return test;
+
+	}
+
+	public String addRoom(int a, String room) {
+
+		Connection con = null;
+		PreparedStatement pst = null;
+
+		String test = "";
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+			con = (Connection) CreateConnection.createConnection();
+
+			String query = "UPDATE projetPeinture SET nomPièce = '" + room + "' WHERE idProjetPeinture = '" + a + "'";
+
+			pst = con.prepareStatement(query); // Making use of prepared statements here to insert bunch
+												// of data
+
+
+			int i = pst.executeUpdate();
+
+			if (i != 0) { // Just to ensure data has been inserted into the database
+
+				return "SUCCESS";
+			} else {
+				System.out.println("Something went wrong...");
+			}
+
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		return test;
 
 	}

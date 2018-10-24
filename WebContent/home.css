@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
 #homeBody {
 	background-image: url("image/Background_iPhone_8_V2.jpg");
 	background-size: cover;
@@ -83,9 +87,15 @@ h2 {
 #title {
 	background-color: #1E3C87;
 	color: white;
+	font-size: 18pt;
+	font-weight: bolder;
+	margin-bottom: 16px;
+	padding: 1rem;
 }
 
-
+#sous-titre {
+	padding: 0 1rem;
+}
 
 .piece {
 	width: 120px;
@@ -98,12 +108,13 @@ h2 {
 
 #bodyPanier {
 	background-image: linear-gradient(#00ECCD, #29B9AD);
+	padding-bottom: 60px;
 }
 
 .zbi {
+	position: fixed;
 	bottom: 0;
-	position: relative;
-	width: 100%
+	width: 100%;
 }
 
 .card {

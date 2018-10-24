@@ -9,22 +9,22 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import KLM.com.dao.ProjetPeintureDao;
+import KLM.com.model.Adhesif;
 import KLM.com.model.ProjetPeinture;
 import KLM.com.model.Rouleaux;
-import KLM.com.util.HibernateUtil;
-import KLM.com.model.*;
+import KLM.com.model.SousCouche;
 
 /**
- * Servlet implementation class ProjetPeintureController
+ * Servlet implementation class CreateNewProjetPeinture
  */
-@WebServlet("/ProjetPeintureController")
-public class ProjetPeintureController extends HttpServlet {
+@WebServlet("/CreateNewProjetPeinture")
+public class CreateNewProjetPeinture extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public ProjetPeintureController() {
+	public CreateNewProjetPeinture() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -35,27 +35,19 @@ public class ProjetPeintureController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		int PPeintureId = Integer.parseInt(request.getParameter("idProjetPeinture"));
-		ProjetPeinture projet = new ProjetPeinture();
-		Rouleaux roll = new Rouleaux();
-		SousCouche undercoat = new SousCouche();
-		Adhesif stripe = new Adhesif();
-		Produits peinture = new Produits();
-		projet.setIdProjetPeinture(PPeintureId);
+		HttpSession session = request.getSession();
 
 		ProjetPeintureDao dao = new ProjetPeintureDao();
-		String test = dao.displayProjet(projet, roll, undercoat, stripe, peinture);
-
+		ProjetPeinture peintureProjet = new ProjetPeinture();
+		String test = dao.createNewProjetPeinture(peintureProjet, session);
+		int a = (int) session.getAttribute("idP");
 		if (test == "SUCCESS") {
 
-			request.setAttribute("projetpeinture", projet);
-			request.setAttribute("peinture", peinture);
-			request.setAttribute("stripe", stripe);
-			request.setAttribute("roll", roll);
-			request.setAttribute("undercoat", undercoat);
-			
-			request.getRequestDispatcher("Panier.jsp").forward(request, response);
+			System.out.println(a);
+
+			request.getRequestDispatcher("TestChoix.jsp").forward(request, response);
 		}
+
 	}
 
 	/**
@@ -64,19 +56,19 @@ public class ProjetPeintureController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-/*		!int PPeintureId = Integer.parseInt(request.getParameter("idProjetPeinture"));
-
 		HttpSession session = request.getSession();
-		
+
 		ProjetPeintureDao dao = new ProjetPeintureDao();
 		ProjetPeinture peintureProjet = new ProjetPeinture();
-		 String test = ProjetPeintureDao.createNewProjetPeinture(peintureProjet, session);
-
+		String test = dao.createNewProjetPeinture(peintureProjet, session);
+		int a = (int) session.getAttribute("idP");
+		
 		if (test == "SUCCESS") {
-			request.getRequestDispatcher("Panier.jsp").forward(request, response);
+			System.out.println(a);
+
+			request.getRequestDispatcher("ChoixPiece.jsp").forward(request, response);
 		}
-		
-		
+
 	}
-*/
-}}
+
+}
