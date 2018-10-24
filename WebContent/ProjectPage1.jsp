@@ -28,10 +28,10 @@
 			<h3 class="d-flex justify-content-center" id="welcome">Nous
 				sommes là pour t’aider ! Découvre ta sélection personnalisée de
 				produits indispensables et conseils pour réussir ton projet !</h3>
-		
+		<br>
 		
 		<a href="CreateNewProjetPeinture"><button id="parti" type="button" class="btn btn-primary">C'est parti !</button></a>
-		</center>	
+		</center>
 	</div>
 
 

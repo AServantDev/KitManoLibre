@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+*{
+	font-family: 'Open Sans', sans-serif;
+}
+
 body{
 	font-family: 'Open Sans', sans-serif;
 }
@@ -57,6 +61,7 @@ body{
 	border-color: #00eccd;
 	border-radius: 1.2em;
 	width: 80%;
+	margin-bottom: 10px;
 }
 
 }
@@ -82,8 +87,11 @@ h2 {
 }
 
 .pieceTitre {
-	font-size: 24pt;
+	font-size: 19pt;
 	color: #1E3C87;
+	font-weight: 800;
+	font-family: 'Open Sans', sans-serif;
+	align-text: center;
 }
 
 #konoDio {
@@ -130,3 +138,41 @@ h2 {
 .cardTitle{
 	padding-top:5px;
 }
+
+#bob{
+    text-align: center;
+    color: #1E3C87;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19pt;
+}
+
+#done{
+	color: white;
+    background-color:#00ECCD;
+    width: 90%;
+    padding:3%;
+    text-align: center;
+    border-radius: 20px;
+    display: block;
+     margin : auto;  
+    font-size:10pt;
+    margin-bottom: 10px;
+    border: #00ECCD solid;
+}
+.bla{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 15pt;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+#dim{
+	width: 50%;
+	border-radius: 5px;
+	background-color: #eeeeec;
+	border: solid #eeeeec 0.5px;
+	
+}
+

@@ -70,6 +70,8 @@ public class ProjetPeintureDao {
 				int idAdhesif = result.getInt("idAdhesif");
 				int idUndercoat = result.getInt("idUndecoat");
 				int idPeinture = result.getInt("idPeinture");
+				String couleur = result.getString("couleurFinale");
+				int surface = result.getInt("surface");
 
 				project.setIdProjet(idProjet);
 
@@ -77,6 +79,10 @@ public class ProjetPeintureDao {
 				project.setIdAdhesif(idAdhesif);
 				project.setIdUndercoat(idUndercoat);
 				project.setIdPeinture(idPeinture);
+				project.setCouleurFinale(couleur);
+				project.setSurface(surface);
+				
+				
 
 				String sql2 = "SELECT * FROM rouleaux WHERE idRouleaux = '" + idRouleaux + "'";
 				st2 = (Statement) con.createStatement();
@@ -236,4 +242,159 @@ public class ProjetPeintureDao {
 
 	}
 
+	
+	public String addColor(int a, String color) {
+
+		Connection con = null;
+		PreparedStatement pst = null;
+
+		String test = "";
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+			con = (Connection) CreateConnection.createConnection();
+
+			String query = "UPDATE projetPeinture SET couleurFinale = '" + color + "' WHERE idProjetPeinture = '" + a + "'";
+
+			pst = con.prepareStatement(query); // Making use of prepared statements here to insert bunch
+												// of data
+
+
+			int i = pst.executeUpdate();
+
+			if (i != 0) { // Just to ensure data has been inserted into the database
+
+				return "SUCCESS";
+			} else {
+				System.out.println("Something went wrong...");
+			}
+
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return test;
+
+	}
+	
+	public String addDim(int a, int dim) {
+
+		Connection con = null;
+		PreparedStatement pst = null;
+
+		String test = "";
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+			con = (Connection) CreateConnection.createConnection();
+
+			String query = "UPDATE projetPeinture SET surface = '" + dim + "' WHERE idProjetPeinture = '" + a + "'";
+
+			pst = con.prepareStatement(query); // Making use of prepared statements here to insert bunch
+												// of data
+
+
+			int i = pst.executeUpdate();
+
+			if (i != 0) { // Just to ensure data has been inserted into the database
+
+				return "SUCCESS";
+			} else {
+				System.out.println("Something went wrong...");
+			}
+
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return test;
+
+	}
+	
+	public String addColor(int a, int dim, String color, HttpSession session,  String nomPiece) {
+		
+		Connection con = null;
+		PreparedStatement pst = null;
+		Statement st = null;
+		
+		String sql;
+
+		String test = "";
+		System.out.println(nomPiece);
+		
+		
+		System.out.println(nomPiece);
+		if((nomPiece == "SdB")) {
+			
+			sql = "SELECT * FROM Peinture WHERE SdB = true AND couleur LIKE '%" + color + "%'";
+			
+			
+		}else {
+			
+			if(dim <= 25) {
+				
+				 sql = "SELECT * FROM Peinture WHERE contenance = 2.5 AND SdB = false AND couleur LIKE '%" + color + "%'";
+				 
+				
+			}else if((dim > 25) && (dim <=50)) {
+				
+				 sql = "SELECT * FROM Peinture WHERE contenance = 5  AND SdB = false AND couleur LIKE '%" + color + "%'";
+				
+			}else {
+				
+				sql = "SELECT * FROM Peinture WHERE contenance = 10 AND SdB = false AND couleur LIKE '%" + color + "%'";
+				
+			}
+			
+		}
+		
+		
+		
+		try {
+			
+			Class.forName("com.mysql.jdbc.Driver");
+
+			con = (Connection) CreateConnection.createConnection();
+			st = (Statement) con.createStatement();
+			
+			ResultSet result = (ResultSet) st.executeQuery(sql);
+			
+			while(result.next()) {
+				
+				int idColor = result.getInt("idProduit");
+				session.setAttribute("idColor", idColor);
+				
+				String query = "UPDATE projetPeinture SET idPeinture = '" + idColor + "' WHERE idProjetPeinture = '" + a + "'";
+
+				pst = con.prepareStatement(query); // Making use of prepared statements here to insert bunch
+													// of data
+
+
+				int i = pst.executeUpdate();
+				
+				if (i != 0) { // Just to ensure data has been inserted into the database
+
+					test =  "SUCCESS";
+				} else {
+					System.out.println("Something went wrong...");
+				}
+				
+				
+				
+			}
+			
+		} catch (SQLException | ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return test;
+		
+	}
+	
 }
+
+

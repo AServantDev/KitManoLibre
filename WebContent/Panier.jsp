@@ -34,7 +34,7 @@
 		<div class="card" id="carte">
 
 			<div class="card-body">
-				<h4 class="cardTitle">Peinture</h4>
+				<h4 class="cardTitle">Peinture  pour ${projet.surface } m²</h4>
 				<div class="bodyCarte">
 					<img class="col-sm-3" id="konoDio" src=${peinture.image }
 						alt="Card image cap"> <span class="col-sm-3"><a href=${peinture.lien}>${peinture.nomProduit }</a></span>
@@ -57,7 +57,7 @@
 		<div class="card" id="carte">
 
 			<div class="card-body">
-				<h4 class="cardTitle">Rouleaux</h4>
+				<h4 class="cardTitle">Rouleau(x) et accessoire(s)</h4>
 				<div class="bodyCarte">
 					<img class="col-sm-3" id="konoDio" src=${roll.imgR }
 						alt="Card image cap"> <span class="col-sm-3"><a href=${roll.lienR}>${roll.nomRouleau }</a></span>
