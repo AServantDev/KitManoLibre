@@ -38,7 +38,7 @@
 				<img class="col-sm-3 card-image" id="konoDio" src=${peinture.image }
 					alt="Card image cap">
 				<div class="card-body-text">
-					<p class="col-sm-3 card-name"><a href=${peinture.lien}>${peinture.nomProduit }</a></p>
+					<p class="col-sm-3 card-name"><a class="card-body-text-link" href=${peinture.lien}>${peinture.nomProduit }</a></p>
 					<p class="col-sm card-price">${peinture.prix}€</p>
 				</div>
 			</div>
@@ -51,7 +51,7 @@
 				<img class="col-sm-3 card-image" id="konoDio" src=${undercoat.imgSC }
 					alt="Card image cap">
 				<div class="card-body-text">
-					<p class="col-sm-3 card-name"><a href=${undercoat.lienSC}>${undercoat.nomSC }</a></p>
+					<p class="col-sm-3 card-name"><a class="card-body-text-link" href=${undercoat.lienSC}>${undercoat.nomSC }</a></p>
 					<p class="col-sm card-price">${undercoat.prix }€</p>
 				</div>
 			</div>
@@ -63,7 +63,7 @@
 				<img class="col-sm-3 card-image" id="konoDio" src=${roll.imgR }
 					alt="Card image cap">
 				<div class="card-body-text">
-					<p class="col-sm-3 card-name"><a href=${roll.lienR}>${roll.nomRouleau }</a></p>
+					<p class="col-sm-3 card-name"><a class="card-body-text-link" href=${roll.lienR}>${roll.nomRouleau }</a></p>
 					<p class="col-sm card-price">${roll.prix }€</p>
 				</div>
 			</div>
@@ -74,7 +74,7 @@
 				<img class="col-sm-3 card-image" id="konoDio" src=${stripe.imgA }
 					alt="Card image cap">
 				<div class="card-body-text">
-					<p class="col-sm-3 card-name"><a href=${stripe.lienA}>${stripe.nomA }</a></p>
+					<p class="col-sm-3 card-name"><a class="card-body-text-link" href=${stripe.lienA}>${stripe.nomA }</a></p>
 					<p class="col-sm card-price">${stripe.prix }€</p>
 				</div>
 			</div>
@@ -82,7 +82,7 @@
 
 	</div>
 
-	<br>
+	
 	<div class="zbi">
 		<button type="button" class="btn btn-primary btn-lg btn-block">Accéder
 			au panier</button>

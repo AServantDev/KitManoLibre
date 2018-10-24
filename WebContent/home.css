@@ -2,18 +2,19 @@
 
 body{
 	font-family: 'Open Sans', sans-serif;
+	padding-bottom: 2rem;
 }
 
 #homeBody {
 	background-image: url("image/Background_iPhone_8_V2.jpg");
 	background-size: cover;
-	font-family: 'Open Sans', sans-serif;
-	padding-bottom: 2rem;
 }
 
 #navHead {
 	background-color: #0C193A;
-	box-shadow: 2px 2px 8px #888888;
+	border: 0;
+	box-shadow: 0px 2px 8px rgba(20, 20, 20, .6);
+	margin: 0;
 }
 
 #navHead *::before, #navHead *::after {
@@ -41,6 +42,7 @@ body{
 
 #titre {
 	color: white;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 1em;
 }
 
@@ -55,16 +57,19 @@ body{
 		height: 100%;
 	}
 	#titre {
-		font-size: 6vw;
+		font-size: 21px;
+		font-weight: 600;
 	}
 	#welcome {
 		font-size: 2rem;
+		margin-bottom: 32px;
 	}
 }
 
 #welcome {
 	color: #0C193A;
 	margin-top: 6em;
+	margin-bottom: 16px;
 }
 
 #parti {
@@ -88,13 +93,22 @@ h2 {
 	background-color: #1E3C87;
 	color: white;
 	font-size: 18pt;
-	font-weight: bolder;
-	margin-bottom: 16px;
-	padding: 1rem;
+	font-weight: 700;
+	margin: 0 0 32px;
+	padding: 16px 32px;
 }
 
 #sous-titre {
-	padding: 0 1rem;
+	color: #0C193A;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 32px 0;
+	padding: 0 32px;
+	text-align: center;
+}
+
+#sous-titre strong {
+	font-weight: 800;
 }
 
 .piece {
@@ -107,8 +121,8 @@ h2 {
 }
 
 #bodyPanier {
-	background-image: linear-gradient(#00ECCD, #29B9AD);
-	padding-bottom: 60px;
+	background: linear-gradient(#00ECCD, #29B9AD);
+	padding-bottom: 46px;
 }
 
 .zbi {
@@ -120,12 +134,12 @@ h2 {
 .card {
 	background-color: #FAFAFA;
 	border-radius: 8px;
-	box-shadow: 1px 2px 8px rgba(20, 20, 60, .35);
+	box-shadow: 1px 1px 3px rgba(20, 20, 60, .35);
 	color: #3C3C3C;
 	font-family: 'Open Sans', sans-serif;
 	height: auto;
 	padding: 16px;
-	margin-top: 14px;
+	margin-bottom: 16px;
 }
 
 .card-header {
@@ -135,6 +149,7 @@ h2 {
 }
 
 .card-body {
+	align-items: center;
 	display: flex;
 }
 
@@ -149,6 +164,11 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.card-body-text-link {
+	color: inherit;
+	text-decoration: none;
 }
 
 .card-name {
