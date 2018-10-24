@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
 #homeBody {
 	background-image: url("image/Background_iPhone_8_V2.jpg");
 	background-size: cover;
@@ -67,6 +71,8 @@ h2 {
 #title {
 	background-color: #1E3C87;
 	color: white;
+	font-size: 18pt;
+	font-weight: bolder;
 }
 
 
@@ -86,21 +92,41 @@ h2 {
 
 #bodyPanier {
 	background-image: linear-gradient(#00ECCD, #29B9AD);
+	padding-bottom: 60px;
 }
 
 .zbi {
-	position: relative;
+	position: fixed;
 	bottom: 0;
-	width: 100%
+	width: 100%;
+	
 }
 
 #carte{
 	background-color: #FAFAFA;
+	padding-top: 0px;
 	border-radius: 10pt;
 	padding-left: 10px;
 	height: 100%;
 }
 
-.price{
+#price{
+	color: #1E3C87;
+	font-style: italic;
+	font-weight: bold;
+	margin-left: 15px;
+	
+}
+
+.bodyCarte{
+	
+	font-size: 4vw;
+	display: grid;
+}
+#sousTitre{
+	text-align: center;
 	color: #0C193A;
+}
+.cardTitle{
+	padding-top:5px;
 }

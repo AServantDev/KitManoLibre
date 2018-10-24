@@ -25,18 +25,20 @@
 
 	<jsp:include page="header.jsp"></jsp:include>
 
-	<h2 class="mx-auto text-center" id="title">Peindre une pièce</h2>
+	<h2 class="mx-auto text-center" id="title">Les indispensables pour peindre ta pièce</h2>
+	
+	<h5 id="sousTitre">Voici <strong>des produits adaptés</strong> à ton projet, tu peux choisir de les supprimer ou non de ton panier ManoMano.</h5>
 
 	<div class="container">
 
 		<div class="card" id="carte">
 
 			<div class="card-body">
-				<h4>Peinture</h4>
+				<h4 class="cardTitle">Peinture</h4>
 				<div class="bodyCarte">
 					<img class="col-sm-3" id="konoDio" src=${peinture.image }
-						alt="Card image cap"> <span class="col-sm-3">${peinture.nomProduit }</span>
-					<div class="col-sm price">${peinture.prix }€</div>
+						alt="Card image cap"> <span class="col-sm-3"><a href=${peinture.lien}>${peinture.nomProduit }</a></span>
+					<div class="col-sm" id="price">${peinture.prix }€</div>
 				</div>
 			</div>
 		</div>
@@ -44,33 +46,33 @@
 		<div class="card" id="carte">
 
 			<div class="card-body">
-				<h4>Sous-couche</h4>
+				<h4 class="cardTitle">Sous-couche</h4>
 				<div class="bodyCarte">
 					<img class="col-sm-3" id="konoDio" src=${undercoat.imgSC }
-						alt="Card image cap"> <span class="col-sm-3">${undercoat.nomSC }</span>
-					<div class="col-sm price">${undercoat.prix }€</div>
+						alt="Card image cap"> <span class="col-sm-3"><a href=${undercoat.lienSC}>${undercoat.nomSC }</a></span>
+					<div class="col-sm" id="price">${undercoat.prix }€</div>
 				</div>
 			</div>
 		</div>
 		<div class="card" id="carte">
 
 			<div class="card-body">
-				<h4>Rouleaux</h4>
+				<h4 class="cardTitle">Rouleaux</h4>
 				<div class="bodyCarte">
 					<img class="col-sm-3" id="konoDio" src=${roll.imgR }
-						alt="Card image cap"> <span class="col-sm-3">${roll.nomRouleau }</span>
-					<div class="col-sm price">${roll.prix }€</div>
+						alt="Card image cap"> <span class="col-sm-3"><a href=${roll.lienR}>${roll.nomRouleau }</a></span>
+					<div class="col-sm" id="price">${roll.prix }€</div>
 				</div>
 			</div>
 		</div>
 		<div class="card" id="carte">
 
 			<div class="card-body">
-				<h4>Adhésif de masquage</h4>
+				<h4 class="cardTitle">Adhésif de masquage</h4>
 				<div class="bodyCarte">
 					<img class="col-sm-3" id="konoDio" src=${stripe.imgA }
-						alt="Card image cap"> <span class="col-sm-3">${stripe.nomA }</span>
-					<div class="col-sm price">${stripe.prix }€</div>
+						alt="Card image cap"> <span class="col-sm-3"><a href=${stripe.lienA}>${stripe.nomA }</a></span>
+					<div class="col-sm " id="price">${stripe.prix }€</div>
 				</div>
 			</div>
 		</div>
