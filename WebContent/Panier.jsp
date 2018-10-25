@@ -33,7 +33,12 @@
 
 		<div class="card">
 
-			<h4 class="card-header">Peinture</h4>
+			<div class="card-header">
+				<h4 class="card-header-title">Peinture</h4>
+				
+				<button class="card-button">Supprimer</button>
+			</div>
+			
 			<div class="card-body">
 				<a href=${peinture.lien}><img class="col-sm-3 card-image" id="konoDio" src=${peinture.image }
 					alt="Card image cap"></a>
@@ -46,7 +51,12 @@
 
 		<div class="card">
 
-			<h4 class="card-header">Sous-couche</h4>
+			<div class="card-header">
+				<h4 class="card-header-title">Sous-couche</h4>
+				
+				<button class="card-button">Supprimer</button>
+			</div>
+			
 			<div class="card-body">
 				<a href=${undercoat.lienSC}><img class="col-sm-3 card-image" id="konoDio" src=${undercoat.imgSC }
 					alt="Card image cap"></a>
@@ -58,7 +68,12 @@
 		</div>
 		<div class="card">
 
-			<h4 class="card-header">Rouleaux</h4>
+			<div class="card-header">
+				<h4 class="card-header-title">Rouleaux et pinceaux</h4>
+				
+				<button class="card-button">Supprimer</button>
+			</div>
+			
 			<div class="card-body">
 				<a href=${roll.lienR}><img class="col-sm-3 card-image" id="konoDio" src=${roll.imgR }
 					alt="Card image cap"></a>
@@ -69,7 +84,12 @@
 			</div>
 		</div>
 		<div class="card">
-			<h4 class="card-header">Adhésif de masquage</h4>
+			<div class="card-header">
+				<h4 class="card-header-title">Adhésif de masquage</h4>
+				
+				<button class="card-button">Supprimer</button>
+			</div>
+			
 			<div class="card-body">
 				<a href=${stripe.lienA}><img class="col-sm-3 card-image" id="konoDio" src=${stripe.imgA }
 					alt="Card image cap"></a>
