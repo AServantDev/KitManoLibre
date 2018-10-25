@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 
+*{
+	font-family: 'Open Sans', sans-serif;
+}
+
 body{
 	font-family: 'Open Sans', sans-serif;
 	padding-bottom: 2rem;
@@ -127,6 +131,7 @@ body{
 	padding-left: 13px;
 	padding-right: 13px;
 	width: 80%;
+	margin-bottom: 10px;
 }
 
 h2 {
@@ -246,4 +251,43 @@ h2 {
 	font-weight: 700;
 	margin-bottom: 0;
 	padding: 0;
+}
+
+
+/* Pages non frontéendées */
+#bob{
+    text-align: center;
+    color: #1E3C87;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19pt;
+}
+
+#done{
+	color: white;
+    background-color:#00ECCD;
+    width: 90%;
+    padding:3%;
+    text-align: center;
+    border-radius: 20px;
+    display: block;
+     margin : auto;  
+    font-size:10pt;
+    margin-bottom: 10px;
+    border: #00ECCD solid;
+}
+.bla{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 15pt;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+#dim{
+	width: 50%;
+	border-radius: 5px;
+	background-color: #eeeeec;
+	border: solid #eeeeec 0.5px;
+	
 }

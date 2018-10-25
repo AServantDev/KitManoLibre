@@ -1,8 +1,6 @@
 package KLM.com.controller;
 
 import java.io.IOException;
-
-import javax.jms.Session;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,16 +11,16 @@ import javax.servlet.http.HttpSession;
 import KLM.com.dao.ProjetPeintureDao;
 
 /**
- * Servlet implementation class addRoom
+ * Servlet implementation class AddColor
  */
-@WebServlet("/addRoom")
-public class addRoom extends HttpServlet {
+@WebServlet("/AddColor")
+public class AddColor extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public addRoom() {
+    public AddColor() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,24 +29,25 @@ public class addRoom extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	
 		HttpSession session = request.getSession(false);
 		int a = (int) session.getAttribute("idP");
 		ProjetPeintureDao dao = new ProjetPeintureDao();
-		String room = request.getParameter("nomPiece");
-		System.out.println(room);
-		session.setAttribute("sdb", room);
+		String color = request.getParameter("couleurFinale");
+		System.out.println(color);
+		session.setAttribute("couleur", color);
 		
 
-		String setRoom = dao.addRoom(a, room);
+		String setColor = dao.addColor(a, color);
 		
-		if (setRoom == "SUCCESS") {
-			System.out.println(room);
+		if (setColor == "SUCCESS") {
+			System.out.println(color);
 
 			
 
-			request.getRequestDispatcher("couleur.jsp").forward(request, response);
+			request.getRequestDispatcher("dimensions.jsp").forward(request, response);
 		}
+		
 	}
 
 	/**

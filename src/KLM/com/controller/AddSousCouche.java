@@ -1,8 +1,6 @@
 package KLM.com.controller;
 
 import java.io.IOException;
-
-import javax.jms.Session;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,16 +11,16 @@ import javax.servlet.http.HttpSession;
 import KLM.com.dao.ProjetPeintureDao;
 
 /**
- * Servlet implementation class addRoom
+ * Servlet implementation class AddSousCouche
  */
-@WebServlet("/addRoom")
-public class addRoom extends HttpServlet {
+@WebServlet("/AddSousCouche")
+public class AddSousCouche extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public addRoom() {
+    public AddSousCouche() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,20 +33,18 @@ public class addRoom extends HttpServlet {
 		HttpSession session = request.getSession(false);
 		int a = (int) session.getAttribute("idP");
 		ProjetPeintureDao dao = new ProjetPeintureDao();
-		String room = request.getParameter("nomPiece");
-		System.out.println(room);
-		session.setAttribute("sdb", room);
+		int dim = (int) session.getAttribute("dim");
 		
 
-		String setRoom = dao.addRoom(a, room);
+		String setUnderCoat = dao.addUndercoat(a, dim, session);
 		
-		if (setRoom == "SUCCESS") {
-			System.out.println(room);
+		if (setUnderCoat == "SUCCESS") {
 
 			
 
-			request.getRequestDispatcher("couleur.jsp").forward(request, response);
+			request.getRequestDispatcher("AddPaint").forward(request, response);
 		}
+		
 	}
 
 	/**

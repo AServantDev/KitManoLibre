@@ -1,8 +1,6 @@
 package KLM.com.controller;
 
 import java.io.IOException;
-
-import javax.jms.Session;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,16 +11,16 @@ import javax.servlet.http.HttpSession;
 import KLM.com.dao.ProjetPeintureDao;
 
 /**
- * Servlet implementation class addRoom
+ * Servlet implementation class AddDim
  */
-@WebServlet("/addRoom")
-public class addRoom extends HttpServlet {
+@WebServlet("/AddDim")
+public class AddDim extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public addRoom() {
+    public AddDim() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,25 +29,27 @@ public class addRoom extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		HttpSession session = request.getSession(false);
 		int a = (int) session.getAttribute("idP");
 		ProjetPeintureDao dao = new ProjetPeintureDao();
-		String room = request.getParameter("nomPiece");
-		System.out.println(room);
-		session.setAttribute("sdb", room);
+		String dim= request.getParameter("dim");
+		int dimension = Integer.parseInt(dim);
+		session.setAttribute("dim", dimension);
+		System.out.println(dim);
 		
 
-		String setRoom = dao.addRoom(a, room);
+		String setDimension = dao.addDim(a, dimension);
 		
-		if (setRoom == "SUCCESS") {
-			System.out.println(room);
+		if (setDimension == "SUCCESS") {
+			System.out.println(dim);
 
 			
 
-			request.getRequestDispatcher("couleur.jsp").forward(request, response);
+			request.getRequestDispatcher("AddSousCouche").forward(request, response);
 		}
+		
 	}
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
