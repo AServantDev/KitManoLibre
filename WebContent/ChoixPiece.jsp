@@ -12,7 +12,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<title>Choisi la pièce!</title>
+<title>Choisis la pièce!</title>
 </head>
 <body>
 
@@ -20,10 +20,10 @@
 	<div class="container page-wrapper" id="choix-page-wrapper">
 
 		<div class="container justify-content-center ">
+		
+			<h1 class="row pieceTitre">Quelle pièce souhaites-tu peindre ?</h1>
+			
 			<div class=" row">
-
-				<h1 class="pieceTitre">Quelle pièce souhaites-tu peindre ?</h1>
-
 				<div class="column d-flex justify-content-center">
 
 					<a href="ProjetPeintureController?idProjetPeinture=1"><input

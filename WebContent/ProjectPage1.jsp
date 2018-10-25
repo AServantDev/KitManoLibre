@@ -20,7 +20,7 @@
 
 	<div class="container page-wrapper" id="home-page-wrapper">
 		
-			<h2 class=" float-sm-left" id="go">Tu as décidé de t’y mettre ?</h2>
+			<h2 class="float-sm-left" id="go">Tu as décidé de t’y mettre ?</h2>
 
 			<h3 class="d-flex justify-content-center" id="welcome">Nous sommes là pour t’aider ! Découvre ta sélection personnalisée de <strong>produits indispensables</strong> et <strong>conseils</strong> pour réussir ton projet !</h3>
 		
