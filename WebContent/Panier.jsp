@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,75 +34,121 @@
 
 		<div class="container">
 	
-			<div class="card">
-	
-				<div class="card-header">
-					<h4 class="card-header-title">Peinture  pour ${projet.surface } m²</h4>
-					
-					<button class="card-button">Supprimer</button>
-				</div>
-				
-				<div class="card-body">
-					<a href=${peinture.lien}><img class="col-sm-3 card-image" id="konoDio" src=${peinture.image }
-						alt="Card image cap"></a>
-					<div class="card-body-text">
-						<p class="col-sm-3 card-name"><a class="card-body-text-link" href=${peinture.lien}>${peinture.nomProduit }</a></p>
-						<p class="col-sm card-price">${peinture.prix}€</p>
+			<c:choose>
+				<c:when test="${idColor != null }">
+					<div class="card">
+			
+						<div class="card-header">
+							<h4 class="card-header-title">Peinture  pour ${projet.surface } m²</h4>
+							
+							<a href="DeleteControllerPeinture?id=${peinture.idProduits}"><button
+								class="card-button">Supprimer</button></a>
+						</div>
+						
+						<div class="card-body">
+							<a href=${peinture.lien}><img class="col-sm-3 card-image" id="konoDio" src=${peinture.image }
+								alt="Card image cap"></a>
+							<div class="card-body-text">
+								<p class="col-sm-3 card-name"><a class="card-body-text-link" href=${peinture.lien}>${peinture.nomProduit }</a></p>
+								<p class="col-sm card-price">${peinture.prix}€</p>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
+				</c:when>
 	
-			<div class="card">
+				<c:otherwise></c:otherwise>
 	
-				<div class="card-header">
-					<h4 class="card-header-title">Sous-couche</h4>
-					
-					<button class="card-button">Supprimer</button>
-				</div>
-				
-				<div class="card-body">
-					<a href=${undercoat.lienSC}><img class="col-sm-3 card-image" id="konoDio" src=${undercoat.imgSC }
-						alt="Card image cap"></a>
-					<div class="card-body-text">
-						<p class="col-sm-3 card-name"><a class="card-body-text-link" href=${undercoat.lienSC}>${undercoat.nomSC }</a></p>
-						<p class="col-sm card-price">${undercoat.prix }€</p>
+			</c:choose>
+
+			<c:choose>
+				<c:when test="${ idUndercoat != null }">
+	
+					<div class="card">
+	
+						<div class="card-header">
+							<h4 class="card-header-title">Sous-couche</h4>
+	
+							<a href="DeleteController?id=${undercoat.idSousCouche}"><button
+									class="card-button">Supprimer</button></a>
+						</div>
+	
+						<div class="card-body">
+							<a href=${undercoat.lienSC}><img class="col-sm-3 card-image"
+								id="konoDio" src=${undercoat.imgSC } alt="Card image cap"></a>
+							<div class="card-body-text">
+								<p class="col-sm-3 card-name">
+									<a class="card-body-text-link" href=${undercoat.lienSC}>${undercoat.nomSC }</a>
+								</p>
+								<p class="col-sm card-price">${undercoat.prix }€</p>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div class="card">
+				</c:when>
+				<c:otherwise>
 	
-				<div class="card-header">
-					<h4 class="card-header-title">Rouleau(x) et accessoire(s)</h4>
-					
-					<button class="card-button">Supprimer</button>
-				</div>
-				
-				<div class="card-body">
-					<a href=${roll.lienR}><img class="col-sm-3 card-image" id="konoDio" src=${roll.imgR }
-						alt="Card image cap"></a>
-					<div class="card-body-text">
-						<p class="col-sm-3 card-name"><a class="card-body-text-link" href=${roll.lienR}>${roll.nomRouleau }</a></p>
-						<p class="col-sm card-price">${roll.prix }€</p>
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-header">
-					<h4 class="card-header-title">Adhésif de masquage</h4>
-					
-					<button class="card-button">Supprimer</button>
-				</div>
-				
-				<div class="card-body">
-					<a href=${stripe.lienA}><img class="col-sm-3 card-image" id="konoDio" src=${stripe.imgA }
-						alt="Card image cap"></a>
-					<div class="card-body-text">
-						<p class="col-sm-3 card-name"><a class="card-body-text-link" href=${stripe.lienA}>${stripe.nomA }</a></p>
-						<p class="col-sm card-price">${stripe.prix }€</p>
-					</div>
-				</div>
-			</div>
+				</c:otherwise>
 	
+			</c:choose>
+	
+			<c:choose>
+				<c:when test="${ idRouleaux != null }">
+	
+					<div class="card">
+	
+						<div class="card-header">
+							<h4 class="card-header-title">Rouleau(x) et accessoire(s)</h4>
+	
+							<a href="DeleteControllerRouleaux?id=${roll.idRouleaux}">
+								<button class="card-button">Supprimer</button>
+							</a>
+	
+						</div>
+	
+						<div class="card-body">
+							<a href=${roll.lienR}><img class="col-sm-3 card-image"
+								id="konoDio" src=${roll.imgR } alt="Card image cap"></a>
+							<div class="card-body-text">
+								<p class="col-sm-3 card-name">
+									<a class="card-body-text-link" href=${roll.lienR}>${roll.nomRouleau }</a>
+								</p>
+								<p class="col-sm card-price">${roll.prix }€</p>
+							</div>
+						</div>
+					</div>
+	
+	
+				</c:when>
+				<c:otherwise></c:otherwise>
+	
+			</c:choose>
+	
+			<c:choose>
+	
+				<c:when test="${ idAdhesif != null }">
+	
+					<div class="card">
+						<div class="card-header">
+							<h4 class="card-header-title">Adhésif de masquage</h4>
+	
+							<a href="DeleteControllerStripe?id=${stripe.idAdhesif}"><button
+									class="card-button">Supprimer</button> </a>
+						</div>
+	
+						<div class="card-body">
+							<a href=${stripe.lienA}><img class="col-sm-3 card-image"
+								id="konoDio" src=${stripe.imgA } alt="Card image cap"></a>
+							<div class="card-body-text">
+								<p class="col-sm-3 card-name">
+									<a class="card-body-text-link" href=${stripe.lienA}>${stripe.nomA }</a>
+								</p>
+								<p class="col-sm card-price">${stripe.prix }€</p>
+							</div>
+						</div>
+					</div>
+	
+				</c:when>
+	
+			</c:choose>
 		</div>
 
 		<div class="zbi">
@@ -119,6 +166,6 @@
 			<button id="panier-empty-button-goto">Flâner sur ManoMano</button>
 		</div>
 	</section>
-</body>
 
+</body>
 </html>

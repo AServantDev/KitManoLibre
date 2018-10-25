@@ -6,10 +6,6 @@ import java.sql.SQLException;
 
 import javax.servlet.http.HttpSession;
 
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.hibernate.query.Query;
-
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 
@@ -17,12 +13,10 @@ import KLM.com.model.ProjetPeinture;
 import KLM.com.model.Rouleaux;
 import KLM.com.model.*;
 import KLM.com.util.DbUtil;
-import KLM.com.util.HibernateUtil;
+
 import KLM.com.util.CreateConnection;
 
 public class ProjetPeintureDao {
-
-	
 
 	public String displayProjet(ProjetPeinture project, Rouleaux roll, SousCouche undercoat, Adhesif stripe,
 			Produits peinture) {
@@ -428,4 +422,141 @@ public class ProjetPeintureDao {
 		return test;
 
 	}
+
+	public String deleteCard(int a) {
+
+		Connection con = null;
+		PreparedStatement pst = null;
+		Statement st = null;
+
+		String test = "";
+
+		String sql = "UPDATE projetPeinture SET idUndecoat = null WHERE idProjetPeinture = '" + a + "'";
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = (Connection) CreateConnection.createConnection();
+			pst = con.prepareStatement(sql);
+
+			int i = pst.executeUpdate();
+
+			if (i != 0) { // Just to ensure data has been inserted into the database
+
+				
+				test = "SUCCESS";
+			} else {
+				System.out.println("Something went wrong...");
+			}
+
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return test;
+
+	}
+	
+	public String deleteRoll(int a) {
+
+		Connection con = null;
+		PreparedStatement pst = null;
+		Statement st = null;
+
+		String test = "";
+
+		String sql = "UPDATE projetPeinture SET idRouleaux = null WHERE idProjetPeinture = '" + a + "'";
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = (Connection) CreateConnection.createConnection();
+			pst = con.prepareStatement(sql);
+
+			int i = pst.executeUpdate();
+
+			if (i != 0) { // Just to ensure data has been inserted into the database
+
+				
+				test = "SUCCESS";
+			} else {
+				System.out.println("Something went wrong...");
+			}
+
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return test;
+
+	}
+	
+	public String deletePaint(int a) {
+
+		Connection con = null;
+		PreparedStatement pst = null;
+		Statement st = null;
+
+		String test = "";
+
+		String sql = "UPDATE projetPeinture SET idPeinture = null WHERE idProjetPeinture = '" + a + "'";
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = (Connection) CreateConnection.createConnection();
+			pst = con.prepareStatement(sql);
+
+			int i = pst.executeUpdate();
+
+			if (i != 0) { // Just to ensure data has been inserted into the database
+
+				
+				test = "SUCCESS";
+			} else {
+				System.out.println("Something went wrong...");
+			}
+
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return test;
+
+	}
+	
+	public String deleteStripe(int a) {
+
+		Connection con = null;
+		PreparedStatement pst = null;
+		Statement st = null;
+
+		String test = "";
+
+		String sql = "UPDATE projetPeinture SET idAdhesif = null WHERE idProjetPeinture = '" + a + "'";
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = (Connection) CreateConnection.createConnection();
+			pst = con.prepareStatement(sql);
+
+			int i = pst.executeUpdate();
+
+			if (i != 0) { // Just to ensure data has been inserted into the database
+
+				
+				test = "SUCCESS";
+			} else {
+				System.out.println("Something went wrong...");
+			}
+
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return test;
+
+	}
+
 }
