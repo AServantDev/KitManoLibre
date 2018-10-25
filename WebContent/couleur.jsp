@@ -7,28 +7,22 @@
 <link rel="stylesheet" href="home.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans"
-	rel="stylesheet">
-
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<title>Choisi la couleur!</title>
+<title>Choisis la couleur!</title>
 </head>
 <body>
 
 	<jsp:include page="header.jsp"></jsp:include>
-	<center>
-
+	<div class="container page-wrapper" id="choix-page-wrapper">
 
 		<div class="container justify-content-center ">
+		
+			<h1 class="row pieceTitre">Quelle est la couleur voulue?</h1>
+			
 			<div class=" row">
-
-				<center>
-					<h1 class="pieceTitre">Quelle est la couleur voulue?</h1>
-				</center>
-
 				<div class="column d-flex justify-content-center">
 
 					<a href="AddColor?couleurFinale=blanc"><input
@@ -37,7 +31,7 @@
 						for="inlineCheckbox1"><img class="piece"
 							src="image/Boutons/Bouton-couleur-blanc.png"></label></a>
 							
-							<a href="AddColor?couleurFinale=beige"> <input
+					<a href="AddColor?couleurFinale=beige"> <input
 						class="form-check-input" type="hidden" id="inlineCheckbox1"
 						value="cuisine"> <label class="form-check-label"
 						for="inlineCheckbox1"><img class="piece"
@@ -63,7 +57,7 @@
 			</div>
 		</div>
 		
-	</center>
+	</div>
 
 
 </body>

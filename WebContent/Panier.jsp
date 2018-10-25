@@ -26,167 +26,170 @@
 
 	<jsp:include page="header.jsp"></jsp:include>
 
+	<h2 class="mx-auto text-center" id="title">Les indispensables pour
+		peindre ta pièce</h2>
+
 	<c:choose>
 		<c:when
 			test="${(idColor == null && idUndercoat == null && idRouleaux == null && idAdhesif == null)}">
 
+			<section id="panier-empty">
+				<h5 id="panier-empty-header">Désolés, tu as tout supprimé et
+					nous n'avons plus de produits indispensables à te suggérer :(</h5>
+
+				<div id="panier-empty-buttons">
+					<a href="ProjectPage1.jsp"><button
+							id="panier-empty-button-restart">Recommencer</button></a> <a
+						href="https://www.manomano.fr/revetement-sol-et-mur-323"><button
+							id="panier-empty-button-goto">Flâner sur ManoMano</button></a>
+				</div>
+			</section>
 
 		</c:when>
 
 		<c:otherwise>
+			<section id="panier">
 
-			<h2 class="mx-auto text-center" id="title">Les indispensables
-				pour peindre ta pièce</h2>
+				<h5 id="sous-titre">
+					Voici <strong>des produits adaptés</strong> à ton projet, tu peux
+					choisir de les supprimer ou non de ton panier ManoMano.
+				</h5>
 
-			<h5 id="sous-titre">
-				Voici <strong>des produits adaptés</strong> à ton projet, tu peux
-				choisir de les supprimer ou non de ton panier ManoMano.
-			</h5>
+				<div class="container">
 
-			<div class="container">
+					<c:choose>
+						<c:when test="${idColor != null }">
+							<div class="card">
 
-				<c:choose>
-					<c:when test="${idColor != null }">
-						<div class="card">
+								<div class="card-header">
+									<h4 class="card-header-title">Peinture pour
+										${projet.surface } m²</h4>
 
-							<div class="card-header">
-								<h4 class="card-header-title">Peinture pour
-									${projet.surface } m²</h4>
+									<a href="DeleteControllerPeinture?id=${peinture.idProduits}"><button
+											class="card-button">Supprimer</button></a>
+								</div>
 
-								<a href="DeleteControllerPeinture?id=${peinture.idProduits}"><button
-										class="card-button">Supprimer</button></a>
-							</div>
-
-							<div class="card-body">
-								<a href=${peinture.lien}><img class="col-sm-3 card-image"
-									id="konoDio" src=${peinture.image } alt="Card image cap"></a>
-								<div class="card-body-text">
-									<p class="col-sm-3 card-name">
-										<a class="card-body-text-link" href=${peinture.lien}>${peinture.nomProduit }</a>
-									</p>
-									<p class="col-sm card-price">${peinture.prix}€</p>
+								<div class="card-body">
+									<a href=${peinture.lien}><img class="col-sm-3 card-image"
+										id="konoDio" src=${peinture.image } alt="Card image cap"></a>
+									<div class="card-body-text">
+										<p class="col-sm-3 card-name">
+											<a class="card-body-text-link" href=${peinture.lien}>${peinture.nomProduit }</a>
+										</p>
+										<p class="col-sm card-price">${peinture.prix}€</p>
+									</div>
 								</div>
 							</div>
-						</div>
+						</c:when>
 
-					</c:when>
+						<c:otherwise></c:otherwise>
 
-					<c:otherwise></c:otherwise>
+					</c:choose>
 
-				</c:choose>
+					<c:choose>
+						<c:when test="${ idUndercoat != null }">
 
+							<div class="card">
 
+								<div class="card-header">
+									<h4 class="card-header-title">Sous-couche</h4>
 
-				<c:choose>
-					<c:when test="${ idUndercoat != null }">
+									<a href="DeleteController?id=${undercoat.idSousCouche}"><button
+											class="card-button">Supprimer</button></a>
+								</div>
 
-						<div class="card">
-
-							<div class="card-header">
-								<h4 class="card-header-title">Sous-couche</h4>
-
-								<a href="DeleteController?id=${undercoat.idSousCouche}"><button
-										class="card-button">Supprimer</button></a>
-							</div>
-
-							<div class="card-body">
-								<a href=${undercoat.lienSC}><img class="col-sm-3 card-image"
-									id="konoDio" src=${undercoat.imgSC } alt="Card image cap"></a>
-								<div class="card-body-text">
-									<p class="col-sm-3 card-name">
-										<a class="card-body-text-link" href=${undercoat.lienSC}>${undercoat.nomSC }</a>
-									</p>
-									<p class="col-sm card-price">${undercoat.prix }€</p>
+								<div class="card-body">
+									<a href=${undercoat.lienSC}><img
+										class="col-sm-3 card-image" id="konoDio"
+										src=${undercoat.imgSC } alt="Card image cap"></a>
+									<div class="card-body-text">
+										<p class="col-sm-3 card-name">
+											<a class="card-body-text-link" href=${undercoat.lienSC}>${undercoat.nomSC }</a>
+										</p>
+										<p class="col-sm card-price">${undercoat.prix }€</p>
+									</div>
 								</div>
 							</div>
-						</div>
-					</c:when>
-					<c:otherwise>
+						</c:when>
+						<c:otherwise>
 
-					</c:otherwise>
+						</c:otherwise>
 
-				</c:choose>
+					</c:choose>
 
+					<c:choose>
+						<c:when test="${ idRouleaux != null }">
 
-				<c:choose>
-					<c:when test="${ idRouleaux != null }">
+							<div class="card">
 
-						<div class="card">
+								<div class="card-header">
+									<h4 class="card-header-title">Rouleau(x) et accessoire(s)</h4>
 
-							<div class="card-header">
-								<h4 class="card-header-title">Rouleau(x) et accessoire(s)</h4>
+									<a href="DeleteControllerRouleaux?id=${roll.idRouleaux}">
+										<button class="card-button">Supprimer</button>
+									</a>
 
-								<a href="DeleteControllerRouleaux?id=${roll.idRouleaux}">
-									<button class="card-button">Supprimer</button>
-								</a>
+								</div>
 
-							</div>
-
-							<div class="card-body">
-								<a href=${roll.lienR}><img class="col-sm-3 card-image"
-									id="konoDio" src=${roll.imgR } alt="Card image cap"></a>
-								<div class="card-body-text">
-									<p class="col-sm-3 card-name">
-										<a class="card-body-text-link" href=${roll.lienR}>${roll.nomRouleau }</a>
-									</p>
-									<p class="col-sm card-price">${roll.prix }€</p>
+								<div class="card-body">
+									<a href=${roll.lienR}><img class="col-sm-3 card-image"
+										id="konoDio" src=${roll.imgR } alt="Card image cap"></a>
+									<div class="card-body-text">
+										<p class="col-sm-3 card-name">
+											<a class="card-body-text-link" href=${roll.lienR}>${roll.nomRouleau }</a>
+										</p>
+										<p class="col-sm card-price">${roll.prix }€</p>
+									</div>
 								</div>
 							</div>
-						</div>
 
 
-					</c:when>
-					<c:otherwise></c:otherwise>
+						</c:when>
+						<c:otherwise></c:otherwise>
 
-				</c:choose>
+					</c:choose>
 
+					<c:choose>
 
-				<c:choose>
+						<c:when test="${ idAdhesif != null }">
 
-					<c:when test="${ idAdhesif != null }">
+							<div class="card">
+								<div class="card-header">
+									<h4 class="card-header-title">Adhésif de masquage</h4>
 
-						<div class="card">
-							<div class="card-header">
-								<h4 class="card-header-title">Adhésif de masquage</h4>
+									<a href="DeleteControllerStripe?id=${stripe.idAdhesif}"><button
+											class="card-button">Supprimer</button> </a>
+								</div>
 
-								<a href="DeleteControllerStripe?id=${stripe.idAdhesif}"><button
-										class="card-button">Supprimer</button> </a>
-							</div>
-
-							<div class="card-body">
-								<a href=${stripe.lienA}><img class="col-sm-3 card-image"
-									id="konoDio" src=${stripe.imgA } alt="Card image cap"></a>
-								<div class="card-body-text">
-									<p class="col-sm-3 card-name">
-										<a class="card-body-text-link" href=${stripe.lienA}>${stripe.nomA }</a>
-									</p>
-									<p class="col-sm card-price">${stripe.prix }€</p>
+								<div class="card-body">
+									<a href=${stripe.lienA}><img class="col-sm-3 card-image"
+										id="konoDio" src=${stripe.imgA } alt="Card image cap"></a>
+									<div class="card-body-text">
+										<p class="col-sm-3 card-name">
+											<a class="card-body-text-link" href=${stripe.lienA}>${stripe.nomA }</a>
+										</p>
+										<p class="col-sm card-price">${stripe.prix }€</p>
+									</div>
 								</div>
 							</div>
-						</div>
 
-					</c:when>
+						</c:when>
 
-				</c:choose>
+					</c:choose>
+				</div>
 
+				<div class="zbi">
 
+					<a href="https://www.manomano.fr/mon-panier/?sp[0][i]=${ idAdhesif}&sp[0][q]=1&sp[1][i]=${ idRouleaux}&sp[1][q]=1&sp[2][i]=${ idUndercoat}&sp[2][q]=1&sp[3][i]=${idColor }&sp[3][q]=1">
+					<button type="button" id="panier-access-button"
+						class="btn btn-primary btn-lg btn-block">Accéder au
+						panier</button></a>
+				</div>
 
-			</div>
-
+			</section>
 		</c:otherwise>
 
 	</c:choose>
 
-	<jsp:include page="header.jsp"></jsp:include>
-
-
-
-
-	<div class="zbi">
-		<button type="button" id="panier-access-button"
-			class="btn btn-primary btn-lg btn-block">Accéder au panier</button>
-	</div>
-
 </body>
-
 </html>
