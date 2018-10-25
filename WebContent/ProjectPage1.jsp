@@ -22,12 +22,9 @@
 		
 			<h2 class=" float-sm-left" id="go">Tu as décidé de t’y mettre ?</h2>
 
-			<h3 class="d-flex justify-content-center" id="welcome">Nous
-				sommes là pour t’aider ! Découvre ta sélection personnalisée de
-				<strong>produits indispensables</strong> et <strong>conseils</strong> pour réussir ton projet !</h3>
+			<h3 class="d-flex justify-content-center" id="welcome">Nous sommes là pour t’aider ! Découvre ta sélection personnalisée de <strong>produits indispensables</strong> et <strong>conseils</strong> pour réussir ton projet !</h3>
 		
-		
-			<a id="parti-container" href="CreateNewProjetPeinture"><button id="parti" type="button" class="btn btn-primary">C'est parti !</button></a>	
+			<a id="parti-container" href="CreateNewProjetPeinture"><button id="parti" type="button" class="btn btn-primary">C'est parti !</button></a>
 	</div>
 
 

@@ -35,20 +35,25 @@ public class ProjetPeintureController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		int PPeintureId = Integer.parseInt(request.getParameter("idProjetPeinture"));
+		
+		HttpSession session = request.getSession(false);
+		int a = (int) session.getAttribute("idP");
+		
 		ProjetPeinture projet = new ProjetPeinture();
+		
+		projet.setIdProjetPeinture(a);
 		Rouleaux roll = new Rouleaux();
 		SousCouche undercoat = new SousCouche();
 		Adhesif stripe = new Adhesif();
 		Produits peinture = new Produits();
-		projet.setIdProjetPeinture(PPeintureId);
+		
 
 		ProjetPeintureDao dao = new ProjetPeintureDao();
 		String test = dao.displayProjet(projet, roll, undercoat, stripe, peinture);
 
 		if (test == "SUCCESS") {
 
-			request.setAttribute("projetpeinture", projet);
+			request.setAttribute("projet", projet);
 			request.setAttribute("peinture", peinture);
 			request.setAttribute("stripe", stripe);
 			request.setAttribute("roll", roll);
@@ -58,25 +63,14 @@ public class ProjetPeintureController extends HttpServlet {
 		}
 	}
 
+	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-/*		!int PPeintureId = Integer.parseInt(request.getParameter("idProjetPeinture"));
-
-		HttpSession session = request.getSession();
-		
-		ProjetPeintureDao dao = new ProjetPeintureDao();
-		ProjetPeinture peintureProjet = new ProjetPeinture();
-		 String test = ProjetPeintureDao.createNewProjetPeinture(peintureProjet, session);
-
-		if (test == "SUCCESS") {
-			request.getRequestDispatcher("Panier.jsp").forward(request, response);
-		}
-		
 		
 	}
-*/
-}}
+
+}

@@ -34,7 +34,7 @@
 		<div class="card">
 
 			<div class="card-header">
-				<h4 class="card-header-title">Peinture</h4>
+				<h4 class="card-header-title">Peinture  pour ${projet.surface } m²</h4>
 				
 				<button class="card-button">Supprimer</button>
 			</div>
@@ -69,7 +69,7 @@
 		<div class="card">
 
 			<div class="card-header">
-				<h4 class="card-header-title">Rouleaux et pinceaux</h4>
+				<h4 class="card-header-title">Rouleau(x) et accessoire(s)</h4>
 				
 				<button class="card-button">Supprimer</button>
 			</div>
