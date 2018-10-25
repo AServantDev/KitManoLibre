@@ -23,7 +23,7 @@
 	<br>
 	<form action="AddDim" method="get">
 		<div class="bla">
-			<input type="number"  id="dim" name="dim" required><span class="validity"></span> <label for="dim"><strong>m²</strong></label>
+			<input type="number"  id="dim" name="dim" required max = "100"><span class="validity"></span> <label for="dim"><strong>m²</strong></label>
 		</div>
 		<br> <br> <br>
 		<button id="done" class="btn btn-primary" type="submit">

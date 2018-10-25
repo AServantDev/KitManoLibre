@@ -11,16 +11,16 @@ import javax.servlet.http.HttpSession;
 import KLM.com.dao.ProjetPeintureDao;
 
 /**
- * Servlet implementation class AddDim
+ * Servlet implementation class AddSousCouche
  */
-@WebServlet("/AddDim")
-public class AddDim extends HttpServlet {
+@WebServlet("/AddSousCouche")
+public class AddSousCouche extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddDim() {
+    public AddSousCouche() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,27 +29,23 @@ public class AddDim extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		HttpSession session = request.getSession(false);
 		int a = (int) session.getAttribute("idP");
 		ProjetPeintureDao dao = new ProjetPeintureDao();
-		String dim= request.getParameter("dim");
-		int dimension = Integer.parseInt(dim);
-		session.setAttribute("dim", dimension);
-		System.out.println(dim);
+		int dim = (int) session.getAttribute("dim");
 		
 
-		String setDimension = dao.addDim(a, dimension);
+		String setUnderCoat = dao.addUndercoat(a, dim, session);
 		
-		if (setDimension == "SUCCESS") {
-			System.out.println(dim);
+		if (setUnderCoat == "SUCCESS") {
 
 			
 
-			request.getRequestDispatcher("AddSousCouche").forward(request, response);
+			request.getRequestDispatcher("AddPaint").forward(request, response);
 		}
 		
 	}
-
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
