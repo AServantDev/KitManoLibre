@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 
 body{
 	font-family: 'Open Sans', sans-serif;
@@ -6,8 +7,12 @@ body{
 }
 
 #homeBody {
-	background-image: url("image/Background_iPhone_8_V2.jpg");
-	background-size: cover;
+	background-color: #0397A7;
+	background-image: url("image/Background_iPhone_8_V3.jpg");
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	background-size: 130vw 700px;
+	height: 100vh;
 }
 
 #navHead {
@@ -32,6 +37,11 @@ body{
 	display: flex;
 }
 
+.navbar-nav {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
 .list:hover {
 	border-bottom: solid white 1px;
 }
@@ -43,7 +53,12 @@ body{
 #titre {
 	color: white;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1em;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+#titre strong {
+	font-weight: 800;
 }
 
 #btnNav {
@@ -51,57 +66,86 @@ body{
 }
 
 @media only screen and (max-width: 768px) {
-	#homeBody {
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 100%;
-	}
-	#titre {
-		font-size: 21px;
-		font-weight: 600;
-	}
 	#welcome {
 		font-size: 2rem;
 		margin-bottom: 32px;
 	}
 }
 
+.page-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin: 48px 30px 32px;
+	padding: 0;
+}
+
+#home-page-wrapper {
+	position: fixed;
+	bottom: 32px;
+}
+
+#choix-page-wrapper {
+	text-align: center;
+}
+
+#home-page-wrapper :nth-child(n):not(:last-child) {
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+
+#go {
+	font-size: 36px;
+	font-weight: 800;
+/*	margin-top: 6rem; */
+}
+
 #welcome {
-	color: #0C193A;
-	margin-top: 6em;
+	color: #FFF;
+	font-size: 19px;
+	font-weight: 400px;
 	margin-bottom: 16px;
+}
+
+#welcome strong {
+	font-weight: 800;
+}
+
+#parti-container {
+	text-align: center;
+	width: 100%;
 }
 
 #parti {
 	background-color: #00eccd;
 	border-color: #00eccd;
 	border-radius: 1.2em;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, .25);
 	color: #fff;
+	font-size: 16px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	padding-left: 13px;
+	padding-right: 13px;
 	width: 80%;
 }
 
-}
 h2 {
 	color: #0C193A;
-}
-
-#go {
-	margin-top: 6rem;
 }
 
 #title {
 	background-color: #1E3C87;
 	color: white;
-	font-size: 18pt;
+	font-size: 18px;
 	font-weight: 700;
 	margin: 0 0 32px;
-	padding: 16px 32px;
+	padding: 20px 48px;
 }
 
 #sous-titre {
 	color: #0C193A;
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: 600;
 	margin: 32px 0;
 	padding: 0 32px;
 	text-align: center;
@@ -112,12 +156,15 @@ h2 {
 }
 
 .piece {
-	width: 120px;
+	width: 136px;
 }
 
 .pieceTitre {
-	font-size: 24pt;
 	color: #1E3C87;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	font-weight: 800;
+	margin-bottom: 48px;
 }
 
 #bodyPanier {
@@ -131,10 +178,19 @@ h2 {
 	width: 100%;
 }
 
+#panier-access-button {
+	background: #00ECCD;
+	border: 0;
+	border-radius: 0;
+	box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.25);
+	font-size: 16px;
+	font-weight: 800;
+}
+
 .card {
 	background-color: #FAFAFA;
-	border-radius: 8px;
-	box-shadow: 1px 1px 3px rgba(20, 20, 60, .35);
+	border-radius: 7px;
+	box-shadow: 0px 2px 5px rgba(33, 63, 133, .28);
 	color: #3C3C3C;
 	font-family: 'Open Sans', sans-serif;
 	height: auto;
@@ -144,7 +200,7 @@ h2 {
 
 .card-header {
 	font-size: 14px;
-	font-weight: 800;
+	font-weight: 600;
 	margin-top: 0;	
 }
 
@@ -161,7 +217,9 @@ h2 {
 }
 
 .card-body-text {
+	color: #424242;
 	display: flex;
+	font-size: 12px;
 	flex-direction: column;
 	justify-content: center;
 }
@@ -181,7 +239,7 @@ h2 {
 .card-price{
 	color: #1E3C87;
 	font-size: 21px;
-	font-weight: 800;
+	font-weight: 700;
 	margin-bottom: 0;
 	padding: 0;
 }

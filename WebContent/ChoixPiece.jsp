@@ -7,8 +7,6 @@
 <link rel="stylesheet" href="home.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans"
-	rel="stylesheet">
 
 
 <script
@@ -19,14 +17,12 @@
 <body>
 
 	<jsp:include page="header.jsp"></jsp:include>
-	<center>
+	<div class="container page-wrapper" id="choix-page-wrapper">
 
 		<div class="container justify-content-center ">
 			<div class=" row">
 
-				<center>
-					<h1 class="pieceTitre">Quelle pièce souhaites-tu peindre ?</h1>
-				</center>
+				<h1 class="pieceTitre">Quelle pièce souhaites-tu peindre ?</h1>
 
 				<div class="column d-flex justify-content-center">
 
@@ -58,7 +54,7 @@
 
 			</div>
 		</div>
-	</center>
+	</div>
 
 
 </body>

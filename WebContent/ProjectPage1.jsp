@@ -8,7 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="home.css">
 
 <script
@@ -19,19 +18,16 @@
 
 	<jsp:include page="header.jsp"></jsp:include>
 
-	<div class="container">
-
+	<div class="container page-wrapper" id="home-page-wrapper">
 		
-		<center>
-		<h2 class=" float-sm-left" id="go">Tu as décidé de t’y mettre ?</h2>
+			<h2 class=" float-sm-left" id="go">Tu as décidé de t’y mettre ?</h2>
 
 			<h3 class="d-flex justify-content-center" id="welcome">Nous
 				sommes là pour t’aider ! Découvre ta sélection personnalisée de
-				produits indispensables et conseils pour réussir ton projet !</h3>
+				<strong>produits indispensables</strong> et <strong>conseils</strong> pour réussir ton projet !</h3>
 		
 		
-		<a href="CreateNewProjetPeinture"><button id="parti" type="button" class="btn btn-primary">C'est parti !</button></a>
-		</center>	
+			<a id="parti-container" href="CreateNewProjetPeinture"><button id="parti" type="button" class="btn btn-primary">C'est parti !</button></a>	
 	</div>
 
 

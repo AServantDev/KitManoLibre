@@ -5,6 +5,7 @@
 
 <html lang="en">
 <head>
+
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -18,7 +19,7 @@
 				<header id="navHead-horizontal-header">
 					<img src="image/logo_kml-03.png" id="logo">
 	
-					<span id="titre" class="">Kit Mano Libre</span>
+					<span id="titre" class="">Kit <strong>Mano</strong> libre</span>
 				</header>
 
 				<button type="button" class="navbar-toggle " data-toggle="collapse"
