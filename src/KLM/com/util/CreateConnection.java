@@ -10,7 +10,7 @@ public class CreateConnection {
 		Connection con = null;
 		String url = "jdbc:mysql://localhost:3306/KitManoLibre"; // MySQL URL followed by the database name
 		String username = "root"; // MySQL username
-		String password = "simplon"; // MySQL password
+		String password = "Azerty123"; // MySQL password
 								 //MySQL password Mathilde "SimplonMYSQL34"
 
 		try {
