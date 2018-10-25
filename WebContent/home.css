@@ -360,6 +360,13 @@ h2 {
 	width: 100%;
 }
 
+#panier-empty-buttons a {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	width: 100%;
+}
+
 #panier-empty-button-restart {
 	background-color: #00eccd;
 	border: 0;
