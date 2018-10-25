@@ -184,6 +184,7 @@ h2 {
 
 #bodyPanier {
 	background: linear-gradient(#00ECCD, #29B9AD);
+	background-attachment: fixed;
 	padding-bottom: 46px;
 }
 
@@ -334,4 +335,58 @@ h2 {
 	height: 32px;
 	padding-left: 8px;
 	width: 70%;
+}
+
+#panier-empty {
+	display: flex;
+	justify-content: center;
+	padding: 0 30px;
+}
+
+#panier-empty-header {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	margin-top: 7.5vh;
+	text-align: center;
+}
+
+#panier-empty-buttons {
+	align-items: center;
+	bottom: 32px;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	width: 100%;
+}
+
+#panier-empty-button-restart {
+	background-color: #00eccd;
+	border: 0;
+	border-radius: 25px;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, .25);
+	color: #fff;
+	font-size: 16px;
+	font-weight: 800;
+	height: 48px;
+	letter-spacing: 1px;
+	padding-left: 13px;
+	padding-right: 13px;
+	width: 80%;
+	margin-bottom: 13px;
+}
+
+#panier-empty-button-goto {
+	background: transparent;
+	border: solid 1px #fff;
+	border-radius: 25px;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, .25);
+	color: #fff;
+	font-size: 11px;
+	font-weight: 800;
+	height: 36px;
+	letter-spacing: 1px;
+	padding-left: 18px;
+	padding-right: 18px;
+	width: 65%;
 }
