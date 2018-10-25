@@ -111,7 +111,7 @@
 
 	</section>
 	
-	<section class="disabled" id="panier-empty">
+	<section id="panier-empty">
 		<h5 id="panier-empty-header">Désolés, tu as tout supprimé et nous n'avons plus de produits indispensables à te suggérer :(</h5>
 		
 		<div id="panier-empty-buttons">
