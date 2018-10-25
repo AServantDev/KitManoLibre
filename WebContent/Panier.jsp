@@ -17,7 +17,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<title>Panier d'ses morts</title>
+<title>Panier</title>
 
 </head>
 
@@ -33,12 +33,17 @@
 
 		<div class="card">
 
-			<h4 class="card-header">Peinture</h4>
+			<div class="card-header">
+				<h4 class="card-header-title">Peinture</h4>
+				
+				<button class="card-button">Supprimer</button>
+			</div>
+			
 			<div class="card-body">
-				<img class="col-sm-3 card-image" id="konoDio" src=${peinture.image }
-					alt="Card image cap">
+				<a href=${peinture.lien}><img class="col-sm-3 card-image" id="konoDio" src=${peinture.image }
+					alt="Card image cap"></a>
 				<div class="card-body-text">
-					<p class="col-sm-3 card-name"><a href=${peinture.lien}>${peinture.nomProduit }</a></p>
+					<p class="col-sm-3 card-name"><a class="card-body-text-link" href=${peinture.lien}>${peinture.nomProduit }</a></p>
 					<p class="col-sm card-price">${peinture.prix}€</p>
 				</div>
 			</div>
@@ -46,35 +51,50 @@
 
 		<div class="card">
 
-			<h4 class="card-header">Sous-couche</h4>
+			<div class="card-header">
+				<h4 class="card-header-title">Sous-couche</h4>
+				
+				<button class="card-button">Supprimer</button>
+			</div>
+			
 			<div class="card-body">
-				<img class="col-sm-3 card-image" id="konoDio" src=${undercoat.imgSC }
-					alt="Card image cap">
+				<a href=${undercoat.lienSC}><img class="col-sm-3 card-image" id="konoDio" src=${undercoat.imgSC }
+					alt="Card image cap"></a>
 				<div class="card-body-text">
-					<p class="col-sm-3 card-name"><a href=${undercoat.lienSC}>${undercoat.nomSC }</a></p>
+					<p class="col-sm-3 card-name"><a class="card-body-text-link" href=${undercoat.lienSC}>${undercoat.nomSC }</a></p>
 					<p class="col-sm card-price">${undercoat.prix }€</p>
 				</div>
 			</div>
 		</div>
 		<div class="card">
 
-			<h4 class="card-header">Rouleaux</h4>
+			<div class="card-header">
+				<h4 class="card-header-title">Rouleaux et pinceaux</h4>
+				
+				<button class="card-button">Supprimer</button>
+			</div>
+			
 			<div class="card-body">
-				<img class="col-sm-3 card-image" id="konoDio" src=${roll.imgR }
-					alt="Card image cap">
+				<a href=${roll.lienR}><img class="col-sm-3 card-image" id="konoDio" src=${roll.imgR }
+					alt="Card image cap"></a>
 				<div class="card-body-text">
-					<p class="col-sm-3 card-name"><a href=${roll.lienR}>${roll.nomRouleau }</a></p>
+					<p class="col-sm-3 card-name"><a class="card-body-text-link" href=${roll.lienR}>${roll.nomRouleau }</a></p>
 					<p class="col-sm card-price">${roll.prix }€</p>
 				</div>
 			</div>
 		</div>
 		<div class="card">
-			<h4 class="card-header">Adhésif de masquage</h4>
+			<div class="card-header">
+				<h4 class="card-header-title">Adhésif de masquage</h4>
+				
+				<button class="card-button">Supprimer</button>
+			</div>
+			
 			<div class="card-body">
-				<img class="col-sm-3 card-image" id="konoDio" src=${stripe.imgA }
-					alt="Card image cap">
+				<a href=${stripe.lienA}><img class="col-sm-3 card-image" id="konoDio" src=${stripe.imgA }
+					alt="Card image cap"></a>
 				<div class="card-body-text">
-					<p class="col-sm-3 card-name"><a href=${stripe.lienA}>${stripe.nomA }</a></p>
+					<p class="col-sm-3 card-name"><a class="card-body-text-link" href=${stripe.lienA}>${stripe.nomA }</a></p>
 					<p class="col-sm card-price">${stripe.prix }€</p>
 				</div>
 			</div>
@@ -82,9 +102,9 @@
 
 	</div>
 
-	<br>
+	
 	<div class="zbi">
-		<button type="button" class="btn btn-primary btn-lg btn-block">Accéder
+		<button type="button" id="panier-access-button" class="btn btn-primary btn-lg btn-block">Accéder
 			au panier</button>
 	</div>
 
