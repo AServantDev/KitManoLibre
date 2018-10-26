@@ -11,7 +11,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<title>Choisis la couleur!</title>
+<title>Kit Mano Libre - Choix Couleur</title>
 </head>
 <body>
 

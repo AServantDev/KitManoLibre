@@ -18,7 +18,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<title>Panier</title>
+<title>Kit Mano Libre - Panier</title>
 
 </head>
 

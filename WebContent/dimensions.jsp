@@ -7,7 +7,7 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="home.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Dimension</title>
+<title>Kit Mano Libre - Dimensions pièce</title>
 </head>
 <body>
 
